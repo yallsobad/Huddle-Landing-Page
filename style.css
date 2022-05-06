@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(images/bg-desktop.svg);
+  background-color: var(--Violet);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: poppins, sans-serif;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+
+.main {
+  display: flex;
+  gap: 2rem;
+}
+
+.image img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.image {
+  flex-basis: 60%;
+}
+
+.community {
+  flex-basis: 40%;
+  padding-top: 4rem;
+}
+
+.community h2 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.community p {
+  font-family: open sans;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin-top: 2rem;
+  border-radius: 75px;
+  border: none;
+  font-family: poppins;
+  font-size: 16px;
+  color: var(--Violet);
+  font-weight: 600;
+  box-shadow: 0 8px 17px -10px rgba(0, 0, 0, 0.8);
+}
+
+button:hover {
+  color: white;
+  background-color: var(--Soft-Magenta);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+}
+
+footer i {
+  padding: 10px;
+}
+
+.facebook {
+  border: solid 2px white;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+.twitter {
+  border: solid 2px white;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px 2px;
+}
+.insta {
+  border: solid 2px white;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px 3px;
+}
+
+.facebook:hover,
+.twitter:hover,
+.insta:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .community {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .community h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .main {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+  }
+  .community {
+    text-align: center;
+  }
+  footer {
+    align-self: center;
+  }
+}
